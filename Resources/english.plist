@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HelpTitle</key>
+	<string>Help</string>
+	<key>HelpInfo2</key>
+	<string>2.The less time consuming, the larger the number, the higher the score.</string>
+	<key>HelpInfo1</key>
+	<string>1.With a multiple of 7 or 7 cards slide upwards, or downwards.</string>
+	<key>GlobalRank</key>
+	<string>Global Rank</string>
+	<key>Rank</key>
+	<string>Rank</string>
+	<key>Restart</key>
+	<string>Restart</string>
+	<key>Record</key>
+	<string>Record : %d</string>
+	<key>Time</key>
+	<string>Time : %.4lf sec</string>
+	<key>ComeOn</key>
+	<string>Come On</string>
+	<key>NewRecord</key>
+	<string>New Record</string>
+	<key>Help</key>
+	<string>Help</string>
+	<key>Start</key>
+	<string>Start</string>
+	<key>MainFont</key>
+	<string>babydoll.ttf</string>
+	<key>MainTitle</key>
+	<string>God 7</string>
+</dict>
+</plist>
