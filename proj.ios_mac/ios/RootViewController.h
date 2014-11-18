@@ -37,6 +37,7 @@
 }
 - (BOOL) prefersStatusBarHidden;
 - (void) initAdBannerView;
-
+- (void) showAdsView;
+- (void) hideAdsView;
 - (GADRequest *)createRequest;
 @end

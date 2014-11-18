@@ -31,7 +31,7 @@ bool CardSprite::init(int numbers,int width,int height, int x, int y, const Colo
     
     LayerColor* layerColorOutline = LayerColor::create(Color4B::ORANGE, width+14,height+14);
     layerColorOutline->setPosition(Vec2(-14,-14));
-    layerColorOutline->setContentSize(Size(width+14, height+14));
+    layerColorOutline->setContentSize(cocos2d::Size(width+14, height+14));
     layerColorOutline->setCascadeOpacityEnabled(true);
     this->addChild(layerColorOutline);
     
@@ -46,7 +46,7 @@ bool CardSprite::init(int numbers,int width,int height, int x, int y, const Colo
     this->addChild(layerColorBG);
     
     this->setPosition(Vec2(x,y));
-    this->setContentSize(Size(width, height));
+    this->setContentSize(cocos2d::Size(width, height));
     return true;
 }
 void CardSprite::enableCardNumberCascadeOpacity(bool bEnable)

@@ -42,7 +42,7 @@ bool MainMenuLayer::initWithColor(const Color4B& bgColor, const Color3B& textCol
     touchListener->onTouchEnded=CC_CALLBACK_2(MainMenuLayer::onTouchEnded,this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener,this);
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
+    cocos2d::Size visibleSize = Director::getInstance()->getVisibleSize();
     
     float titleWidth =  visibleSize.width*0.25f;
     labelTitle = Label::createWithTTF(CommonHelper::getLocalString("MainTitle"), CommonHelper::getLocalString("MainFont"), titleWidth);
@@ -74,8 +74,8 @@ void MainMenuLayer::onTouchEnded(Touch *touch, Event *unused_event)
         if(startBtn)
         {
             Vec2 locationInNode = startBtn->convertToNodeSpace(touch->getLocation());
-            Size st = startBtn->getContentSize();
-            Rect rect = Rect(0, 0, st.width, st.height);
+            cocos2d::Size st = startBtn->getContentSize();
+            cocos2d::Rect rect = cocos2d::Rect(0, 0, st.width, st.height);
             if(rect.containsPoint(locationInNode))
             {
                 clickStartBtn();
@@ -85,8 +85,8 @@ void MainMenuLayer::onTouchEnded(Touch *touch, Event *unused_event)
         if(helpBtn)
         {
             Vec2 locationInNode = helpBtn->convertToNodeSpace(touch->getLocation());
-            Size st = helpBtn->getContentSize();
-            Rect rect = Rect(0, 0, st.width, st.height);
+            cocos2d::Size st = helpBtn->getContentSize();
+            cocos2d::Rect rect = cocos2d::Rect(0, 0, st.width, st.height);
             if(rect.containsPoint(locationInNode))
             {
                 clickHelpBtn();

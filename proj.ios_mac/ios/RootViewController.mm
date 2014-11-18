@@ -149,15 +149,36 @@ extern "C"{
     if(admobBannerView != nil)
     {
         admobBannerView.adUnitID = @"ca-app-pub-3628527903442392/1900044662";
-        admobBannerView.delegate = self;
+        //admobBannerView.delegate = self;
         [admobBannerView setRootViewController:self];
         admobBannerView.hidden = YES;
         [self.view addSubview:admobBannerView];
     
-        [admobBannerView loadRequest:[self createRequest]];
+        //[admobBannerView loadRequest:[self createRequest]];
     }
 }
-
+- (void) showAdsView {
+    if(admobBannerView != nil)
+    {
+        admobBannerView.delegate = self;
+        [admobBannerView loadRequest:[self createRequest]];
+    }
+    if(iAdBannerView != nil)
+    {
+        iAdBannerView.hidden = NO;
+    }
+}
+- (void) hideAdsView {
+    if(admobBannerView != nil)
+    {
+        admobBannerView.delegate = nil;
+        admobBannerView.hidden = YES;
+    }
+    if(iAdBannerView != nil)
+    {
+        iAdBannerView.hidden = YES;
+    }
+}
 - (GADRequest *)createRequest {
     GADRequest *request = [GADRequest request];
     // Requests test ads on devices you specify. Your test device ID is printed to the console when
@@ -183,7 +204,7 @@ extern "C"{
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     NSLog(@"bannerViewActionDidFinish %d",iAdBannerView.bannerLoaded);
-    iAdBannerView.hidden = NO;
+    //iAdBannerView.hidden = NO;
     
     if (admobBannerView != nil)
     {

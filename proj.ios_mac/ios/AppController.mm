@@ -27,7 +27,8 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
-
+#include "NativeBridge.h"
+#import "Flurry.h"
 @implementation AppController
 
 #pragma mark -
@@ -39,7 +40,9 @@ static AppDelegate s_sharedApplication;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     // Override point for customization after application launch.
-
+    ///Flurry App Key 3MKG3RHKJKSK67MGQPBB
+    [Flurry startSession:@"3MKG3RHKJKSK67MGQPBB"];
+    [Flurry setCrashReportingEnabled:YES];
     // Add the view controller's view to the window and display.
     window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
 
@@ -59,6 +62,7 @@ static AppDelegate s_sharedApplication;
     
     ///add ad banner view
     [_viewController initAdBannerView];
+    NativeBridge::getInstance()->setRootViewController(_viewController);
 
     // Set RootViewController to window
     if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)

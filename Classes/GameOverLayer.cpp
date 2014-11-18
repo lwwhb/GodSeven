@@ -40,8 +40,11 @@ bool GameOverLayer::initWithColor(bool success, float totalTime, int score, cons
     touchListener->onTouchEnded=CC_CALLBACK_2(GameOverLayer::onTouchEnded,this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener,this);
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Size size = Size(visibleSize.width*0.8f, visibleSize.width*1.0f);
+    cocos2d::Size visibleSize = Director::getInstance()->getVisibleSize();
+    cocos2d::Size size = cocos2d::Size(visibleSize.width*0.8f, visibleSize.width*1.0f);
+    Application::Platform platform = CCApplication::getInstance()->getTargetPlatform();
+    if(platform == Application::Platform::OS_IPAD)
+        size = size = cocos2d::Size(visibleSize.width*0.8f, visibleSize.width*0.9f);
     
     LayerColor* layerColorOutline = LayerColor::create(Color4B::GRAY, size.width, size.height);
     layerColorOutline->setPosition((visibleSize.width-size.width)*0.5f + 4, (visibleSize.height - size.height)*0.75f - 4);
@@ -103,8 +106,8 @@ void GameOverLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_e
         if(restartBtn)
         {
             Vec2 locationInNode = restartBtn->convertToNodeSpace(touch->getLocation());
-            Size st = restartBtn->getContentSize();
-            Rect rect = Rect(0, 0, st.width, st.height);
+            cocos2d::Size st = restartBtn->getContentSize();
+            cocos2d::Rect rect = cocos2d::Rect(0, 0, st.width, st.height);
             if(rect.containsPoint(locationInNode))
             {
                 clickRestartBtn();
@@ -114,8 +117,8 @@ void GameOverLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_e
         if(rankBtn)
         {
             Vec2 locationInNode = rankBtn->convertToNodeSpace(touch->getLocation());
-            Size st = rankBtn->getContentSize();
-            Rect rect = Rect(0, 0, st.width, st.height);
+            cocos2d::Size st = rankBtn->getContentSize();
+            cocos2d::Rect rect = cocos2d::Rect(0, 0, st.width, st.height);
             if(rect.containsPoint(locationInNode))
             {
                 clickRankBtn();

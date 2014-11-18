@@ -11,6 +11,7 @@
 #include "UIButton.h"
 #include "SimpleAudioEngine.h"
 #include "CommonHelper.h"
+#include "NativeBridge.h"
 USING_NS_CC;
 using namespace CocosDenshion;
 #define MAX_WAIT_TIME 5
@@ -43,7 +44,7 @@ bool MainLayer::init()
     touchListener->onTouchEnded=CC_CALLBACK_2(MainLayer::onTouchEnded,this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener,this);
     
-    Size visibleSize = Director::getInstance()->getWinSize();
+    cocos2d::Size visibleSize = Director::getInstance()->getWinSize();
     m_fCardWidth = visibleSize.width*0.6f;
     m_fCardHeight = m_fCardWidth;
     m_BirthPoint = Vec2(visibleSize.width*0.5f, visibleSize.height*0.5f);
@@ -71,7 +72,7 @@ void MainLayer::update(float delta)
         m_fSecondTimer += delta;
         if(m_fSecondTimer < MAX_WAIT_TIME)
         {
-            adjustCurCardColor();
+            adjustCurCardColor(m_fSecondTimer);
         }
         else
         {
@@ -105,9 +106,11 @@ void MainLayer::removeStartLabel()
         m_pLabelStart = nullptr;
     }
 }
-void MainLayer::adjustCurCardColor()
+void MainLayer::adjustCurCardColor(float escapeTime)
 {
     //log("adjustCardColor");
+    float percent = m_fSecondTimer/MAX_WAIT_TIME;
+    m_pCurCard->setOpacity(255*(1.0f - percent));
 }
 bool MainLayer::checkValidity(bool notSeven)
 {
@@ -131,6 +134,7 @@ bool MainLayer::checkValidity(bool notSeven)
 }
 void MainLayer::gameOver()
 {
+    NativeBridge::getInstance()->showAdsView();
     m_bOver = true;
     log("gameOver");
     removeStartLabel();
@@ -142,7 +146,7 @@ bool MainLayer::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event
 {
     if(!m_bStart || m_bOver)
         return true;
-    Point touchPoint = touch->getLocation();
+    cocos2d::Point touchPoint = touch->getLocation();
     touch->getLocationInView();
     beginX = touchPoint.x;
     beginY = touchPoint.y;
@@ -153,7 +157,7 @@ void MainLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event
 {
     if(!m_bStart || m_bOver)
         return;
-    Point touchPoint=touch->getLocation();
+    cocos2d::Point touchPoint=touch->getLocation();
     endX = touchPoint.x;
     endY = touchPoint.y;
 
@@ -232,6 +236,7 @@ void MainLayer::reset()
     CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(MainLayer::gameStart,this));
     Sequence* sequence = Sequence::createWithTwoActions(delatTime, callFunc);
     this->runAction(sequence);
+    NativeBridge::getInstance()->hideAdsView();
 }
 
 bool MainLayer::isNewRecord()

@@ -49,7 +49,7 @@ private:
     
     void gameStart();
     void removeStartLabel();
-    void adjustCurCardColor();
+    void adjustCurCardColor(float escapeTime);
     bool checkValidity(bool notSeven);
     void gameOver();
 
@@ -83,7 +83,6 @@ public:
 private:
     int beginX, beginY, endX, endY;
     CardSprite*      m_pCurCard;
-    CardSprite*      m_pNextCard;
     bool    m_bStart;
     bool    m_bOver;
     float   m_fFrezonTime;
