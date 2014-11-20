@@ -68,7 +68,7 @@ bool HelpLayer::initWithColor(const Color4B& bgColor, const Color3B& textColor)
     labelHelpInfo1->setAlignment(TextHAlignment::CENTER);
     labelHelpInfo1->setColor(textColor);
     labelHelpInfo1->enableOutline(Color4B::GRAY, 2);
-    labelHelpInfo1->setPosition(visibleSize.width*0.5f, visibleSize.height*0.7f);
+    labelHelpInfo1->setPosition(visibleSize.width*0.5f, visibleSize.height*0.65f);
     labelHelpInfo1->setMaxLineWidth(size.width*0.8f);
     this->addChild(labelHelpInfo1);
     
@@ -76,7 +76,7 @@ bool HelpLayer::initWithColor(const Color4B& bgColor, const Color3B& textColor)
     labelHelpInfo2->setAlignment(TextHAlignment::CENTER);
     labelHelpInfo2->setColor(textColor);
     labelHelpInfo2->enableOutline(Color4B::GRAY, 2);
-    labelHelpInfo2->setPosition(visibleSize.width*0.5f, visibleSize.height*0.45f);
+    labelHelpInfo2->setPosition(visibleSize.width*0.5f, visibleSize.height*0.4f);
     labelHelpInfo2->setMaxLineWidth(size.width*0.8f);
     this->addChild(labelHelpInfo2);
     

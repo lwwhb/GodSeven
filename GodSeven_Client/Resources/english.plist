@@ -5,9 +5,9 @@
 	<key>HelpTitle</key>
 	<string>Help</string>
 	<key>HelpInfo2</key>
-	<string>2.The less time consuming, the larger the number, the higher the score.</string>
+	<string>2.Higher score with less time and larger number</string>
 	<key>HelpInfo1</key>
-	<string>1.With a multiple of 7 or 7 cards slide upwards, or downwards.</string>
+	<string>1.Slide up when the number is the multiple of 7 or contains 7; otherwise, slide down.</string>
 	<key>GlobalRank</key>
 	<string>Global Rank</string>
 	<key>Rank</key>
