@@ -14,11 +14,11 @@
 		<string>github.com:lwwhb/GodSeven.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>proj.ios_mac/GodSeven.xcodeproj</string>
+	<string>GodSeven_Client/proj.ios_mac/GodSeven.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>029366336822E5E1889A6548A6CEB2FE39BC7F58</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:lwwhb/GodSeven.git</string>
