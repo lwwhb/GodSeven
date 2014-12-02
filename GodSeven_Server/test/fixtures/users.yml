@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: MyString
+  ipaddress: 1
+  countrycode: 1
+  nickname: MyString
+  score: 1
+  results: MyText
+
+two:
+  uuid: MyString
+  ipaddress: 1
+  countrycode: 1
+  nickname: MyString
+  score: 1
+  results: MyText

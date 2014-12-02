@@ -10,9 +10,25 @@
 #include "MainLayer.h"
 #include "SimpleAudioEngine.h"
 #include "CommonHelper.h"
+#include "C2DXShareSDK.h"
 using namespace CocosDenshion;
+using namespace cn::sharesdk;
 USING_NS_CC;
 
+
+void shareResultHandler(C2DXResponseState state, C2DXPlatType platType, CCDictionary *shareInfo, CCDictionary *error)
+{
+    switch (state) {
+        case C2DXResponseStateSuccess:
+            CCLog("分享成功");
+            break;
+        case C2DXResponseStateFail:
+            CCLog("分享失败");
+            break;
+        default:
+            break;
+    }
+}
 GameOverLayer* GameOverLayer::create(bool success, float totalTime, int score, const Color4B& bgColor, const Color3B& textColor)
 {
     GameOverLayer* layer = new GameOverLayer();
@@ -86,11 +102,17 @@ bool GameOverLayer::initWithColor(bool success, float totalTime, int score, cons
 
     float btnWidth = size.width*0.4f;
     float btnHeight = size.height*0.12f;
-    restartBtn = ColorButton::create(CommonHelper::getLocalString("Restart"), btnWidth, btnHeight, visibleSize.width*0.2f, visibleSize.height*(-0.08f), bgColor, textColor);
-    layerColorBG->addChild(restartBtn);
+//    restartBtn = ColorButton::create(CommonHelper::getLocalString("Restart"), btnWidth, btnHeight, visibleSize.width*0.2f, visibleSize.height*(-0.08f), bgColor, textColor);
+//    layerColorBG->addChild(restartBtn);
     
-    rankBtn = ColorButton::create(CommonHelper::getLocalString("Rank"), btnWidth, btnHeight, visibleSize.width*0.6f, visibleSize.height*(-0.08f), bgColor, textColor);
-    layerColorBG->addChild(rankBtn);
+//    rankBtn = ColorButton::create(CommonHelper::getLocalString("Rank"), btnWidth, btnHeight, visibleSize.width*0.6f, visibleSize.height*(-0.08f), bgColor, textColor);
+//    layerColorBG->addChild(rankBtn);
+    
+    shareBtn = ColorButton::create(CommonHelper::getLocalString("Share"), btnWidth, btnHeight, visibleSize.width*0.2f, visibleSize.height*(-0.08f), bgColor, textColor);
+    layerColorBG->addChild(shareBtn);
+    
+    restartBtn = ColorButton::create(CommonHelper::getLocalString("Restart"), btnWidth, btnHeight, visibleSize.width*0.6f, visibleSize.height*(-0.08f), bgColor, textColor);
+    layerColorBG->addChild(restartBtn);
     return true;
 }
 bool GameOverLayer::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event)
@@ -114,14 +136,26 @@ void GameOverLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_e
                 return;
             }
         }
-        if(rankBtn)
+//        if(rankBtn)
+//        {
+//            Vec2 locationInNode = rankBtn->convertToNodeSpace(touch->getLocation());
+//            cocos2d::Size st = rankBtn->getContentSize();
+//            cocos2d::Rect rect = cocos2d::Rect(0, 0, st.width, st.height);
+//            if(rect.containsPoint(locationInNode))
+//            {
+//                clickRankBtn();
+//                return;
+//            }
+//        }
+        
+        if(shareBtn)
         {
-            Vec2 locationInNode = rankBtn->convertToNodeSpace(touch->getLocation());
-            cocos2d::Size st = rankBtn->getContentSize();
+            Vec2 locationInNode = shareBtn->convertToNodeSpace(touch->getLocation());
+            cocos2d::Size st = shareBtn->getContentSize();
             cocos2d::Rect rect = cocos2d::Rect(0, 0, st.width, st.height);
             if(rect.containsPoint(locationInNode))
             {
-                clickRankBtn();
+                clickShareBtn();
                 return;
             }
         }
@@ -145,4 +179,23 @@ void GameOverLayer::clickRankBtn()
         mainLayer->endGameOverLayer(false);
         mainLayer->addRankLayer();
     }
+}
+void GameOverLayer::clickShareBtn()
+{
+    log("clickShareBtn");
+    SimpleAudioEngine::getInstance()->playEffect("btnclick.wav");
+    
+    CCDictionary *content = CCDictionary::create();
+    content -> setObject(CCString::create("这是一条测试内容"), "content");
+    content -> setObject(CCString::create("http://img0.bdstatic.com/img/image/shouye/systsy-11927417755.jpg"), "image");
+    content -> setObject(CCString::create("测试标题"), "title");
+    content -> setObject(CCString::create("测试描述"), "description");
+    content -> setObject(CCString::create("http://sharesdk.cn"), "url");
+    content -> setObject(CCString::createWithFormat("%d", C2DXContentTypeNews), "type");
+    content -> setObject(CCString::create("http://sharesdk.cn"), "siteUrl");
+    content -> setObject(CCString::create("ShareSDK"), "site");
+    content -> setObject(CCString::create("http://mp3.mwap8.com/destdir/Music/2009/20090601/ZuiXuanMinZuFeng20090601119.mp3"), "musicUrl");
+    content -> setObject(CCString::create("extInfo"), "extInfo");
+
+    C2DXShareSDK::showShareMenu(NULL, content, CCPointMake(235, 800), C2DXMenuArrowDirectionDown, shareResultHandler);
 }

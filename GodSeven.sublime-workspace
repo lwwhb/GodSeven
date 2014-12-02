@@ -1,0 +1,608 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"IP",
+				"ip_address"
+			],
+			[
+				"se",
+				"session_token"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"in",
+				"integer"
+			],
+			[
+				"set",
+				"setup_user"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"p",
+				"presence"
+			],
+			[
+				"get",
+				"get"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "GodSeven_Server/app/controllers/game_controller.rb",
+			"settings":
+			{
+				"buffer_size": 542,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 112 files for \"uuid\"\n\n/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/config/environments/production.rb:\n   46  \n   47    # Prepend all log lines with the following tags.\n   48:   # config.log_tags = [ :subdomain, :uuid ]\n   49  \n   50    # Use a different logger for distributed setups.\n\n1 match in 1 file\n\n\nSearching 112 files for \"require 'rubygems'\"\n\n/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/controllers/game_controller.rb:\n    1: require 'rubygems'\n    2  require 'uuidtools'\n    3  class GameController < ApplicationController\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 577,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "GodSeven_Server/Gemfile",
+			"settings":
+			{
+				"buffer_size": 1372,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GodSeven_Server/Gemfile.lock",
+			"settings":
+			{
+				"buffer_size": 2814,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GodSeven_Server/app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 50,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GodSeven_Server/app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 82,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GodSeven_Server/db/development.sqlite3",
+			"settings":
+			{
+				"buffer_size": 51200,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GodSeven_Server/config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1643,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "GodSeven_Server/app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 845,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Ruby/Ruby.sublime-build",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/controllers",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/helpers",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/models",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/models/concerns",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/views",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/views/users",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/db",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/db/migrate",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/lib",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/lib/assets",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/lib/tasks",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/log",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/tmp"
+	],
+	"file_history":
+	[
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/db/schema.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/db/development.sqlite3",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/db/migrate/20141124113816_create_users.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/config/environments/production.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/controllers/game_rank_controller.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/models/user.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/controllers/users_controller.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/views/game_rank/get_global_rank.html.erb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/views/game_rank/update_myself_rank.html.erb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/config/routes.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/controllers/application_controller.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/log/development.log",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/config/application.rb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/views/layouts/application.html.erb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/views/welcome/index.html.erb",
+		"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server/app/controllers/welcome_controller.rb",
+		"/Users/wanghaibo/Downloads/DRAGON_LOG_DUMP.sql",
+		"/Users/wanghaibo/Downloads/DRAGON_MASTER_DUMP_month_card_info_add.sql",
+		"/Users/wanghaibo/Downloads/2014 Q4 团建名单",
+		"/Users/wanghaibo/Downloads/Unity-Community-Ocean-master/Assets/Ocean Sources/Ocean.js",
+		"/Applications/Unity/u5.0.0b1cmac/Unity_v5.x.ulf",
+		"/Users/wanghaibo/Downloads/heroitem.shader",
+		"/Users/wanghaibo/Documents/workspace/源代码/rr2/code/modules/knightsrenderer/sources/genericskinnedmodel.shader",
+		"/Users/wanghaibo/Documents/workspace/源代码/rr2/code/modules/knightsrenderer/sources/unit.shader",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt",
+		"/Users/wanghaibo/Documents/workspace/源代码/rr2/code/library/local/modules/runtime/graphics/include/keen/graphics/platform.hs",
+		"/Users/wanghaibo/Documents/gitroot/gitprojects/WanaX/README.md",
+		"/Users/wanghaibo/Documents/cocos2d-x-3.2/README.md",
+		"/Users/wanghaibo/.bash_profile",
+		"/Users/wanghaibo/Downloads/cocos2d-x-3.2/README.md",
+		"/Users/wanghaibo/Downloads/Video.Games.The.Movie.2014.720p.WEB-DL.DD5.1.H264-RARBG/Video.Games.The.Movie.2014.720p.WEB-DL.DD5.1.H264-RARBG(中文).srt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/wanghaibo/Desktop/GodSeven/GodSeven_Server"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"uid",
+			"require 'rubygems'",
+			"uuid",
+			"welcome",
+			"GodSevenServer",
+			"root",
+			"KEEN_SHADER_MINIMAL",
+			"KEEN_VERTEX_SHADER",
+			"#include",
+			"KEEN_SHADER_SHADOW",
+			"KEEN_SHADER_STENCIL",
+			"KEEN_TEXTUREDEBUG",
+			"KEEN_SHADER_STENCIL",
+			"KEEN_SHADER_ADRENO205",
+			"android"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "GodSeven_Server/app/controllers/game_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 577,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										227,
+										231
+									],
+									[
+										460,
+										478
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 145.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "GodSeven_Server/Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1370,
+								1370
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 75.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "GodSeven_Server/Gemfile.lock",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 284.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "GodSeven_Server/app/controllers/users_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 50,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "GodSeven_Server/app/models/user.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 82,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "GodSeven_Server/db/development.sqlite3",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 51200,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "GodSeven_Server/config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "GodSeven_Server/app/controllers/application_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 845,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								373,
+								395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "GodSeven.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

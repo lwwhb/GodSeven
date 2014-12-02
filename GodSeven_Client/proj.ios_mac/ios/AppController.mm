@@ -28,6 +28,10 @@
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #include "NativeBridge.h"
+
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+
 #import "Flurry.h"
 @implementation AppController
 
@@ -39,6 +43,10 @@ static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
+    //导入微信类型
+    [ShareSDK importWeChatClass:[WXApi class]];
+
+    
     // Override point for customization after application launch.
     ///Flurry App Key 3MKG3RHKJKSK67MGQPBB
     [Flurry startSession:@"3MKG3RHKJKSK67MGQPBB"];
@@ -128,7 +136,15 @@ static AppDelegate s_sharedApplication;
      See also applicationDidEnterBackground:.
      */
 }
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url sourceApplication:nil annotation:nil wxDelegate:nil];
+}
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation wxDelegate:nil];
+}
 
 #pragma mark -
 #pragma mark Memory management

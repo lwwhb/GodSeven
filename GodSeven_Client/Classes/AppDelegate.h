@@ -2,7 +2,7 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
-
+#include "C2DXShareSDK.h"
 /**
 @brief    The cocos2d Application.
 
@@ -10,6 +10,9 @@ The reason for implement as private inheritance is to hide some interface call b
 */
 class  AppDelegate : private cocos2d::Application
 {
+private:
+    //初始化平台配置
+    void initPlatformConfig();
 public:
     AppDelegate();
     virtual ~AppDelegate();

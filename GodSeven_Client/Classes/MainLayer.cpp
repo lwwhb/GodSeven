@@ -15,6 +15,7 @@
 USING_NS_CC;
 using namespace CocosDenshion;
 #define MAX_WAIT_TIME 5
+
 Scene* MainLayer::createScene()
 {
     // 'scene' is an autorelease object
@@ -43,6 +44,8 @@ bool MainLayer::init()
     touchListener->onTouchBegan=CC_CALLBACK_2(MainLayer::onTouchBegan,this);
     touchListener->onTouchEnded=CC_CALLBACK_2(MainLayer::onTouchEnded,this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener,this);
+    
+    beginX = beginY = endX = endY = -1;
     
     cocos2d::Size visibleSize = Director::getInstance()->getWinSize();
     m_fCardWidth = visibleSize.width*0.6f;
@@ -155,7 +158,7 @@ bool MainLayer::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event
 }
 void MainLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event)
 {
-    if(!m_bStart || m_bOver)
+    if(!m_bStart || m_bOver || beginY < 0)
         return;
     cocos2d::Point touchPoint=touch->getLocation();
     endX = touchPoint.x;

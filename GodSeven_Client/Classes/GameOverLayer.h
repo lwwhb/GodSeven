@@ -26,12 +26,14 @@ protected:
     
     void clickRestartBtn();
     void clickRankBtn();
+    void clickShareBtn();
 private:
     cocos2d::LayerColor*    layerColorBG;
     cocos2d::Color4B        colorBG;
     cocos2d::Label*         labelTitle;
     ColorButton*            restartBtn;
     ColorButton*            rankBtn;
+    ColorButton*            shareBtn;
     bool                    m_bEnable;
 };
 
