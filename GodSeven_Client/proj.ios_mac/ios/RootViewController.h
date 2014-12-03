@@ -26,7 +26,7 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import "GADBannerViewDelegate.h"
-
+#import "RateThisAppDialog.h"
 @class GADBannerView, GADRequest;
 
 @interface RootViewController : UIViewController <GADBannerViewDelegate, ADBannerViewDelegate> {
@@ -39,5 +39,7 @@
 - (void) initAdBannerView;
 - (void) showAdsView;
 - (void) hideAdsView;
+- (void) showRateAppViewCH;
+- (void) showRateAppViewEN;
 - (GADRequest *)createRequest;
 @end

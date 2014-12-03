@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>RateTitle</key>
+	<string>Rate GodSeven</string>
+	<key>RateMessage</key>
+	<string>thanks for your supports!</string>
+	<key>RateNow</key>
+	<string>Now</string>
+	<key>RateNever</key>
+	<string>Never</string>
+	<key>RateLater</key>
+	<string>Later</string>
 	<key>Share</key>
 	<string>Share</string>
 	<key>HelpTitle</key>

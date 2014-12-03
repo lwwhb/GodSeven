@@ -88,6 +88,7 @@
 		5543F4CB1A077945006FD173 /* god.png in Resources */ = {isa = PBXBuildFile; fileRef = 5543F4CA1A077945006FD173 /* god.png */; };
 		5543F4D01A0799E2006FD173 /* god7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5543F4CE1A0799E2006FD173 /* god7.wav */; };
 		5543F4D11A0799E2006FD173 /* no7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5543F4CF1A0799E2006FD173 /* no7.wav */; };
+		556EEE531A2F088D00DDAA24 /* RateThisAppDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EEE521A2F088D00DDAA24 /* RateThisAppDialog.m */; };
 		5595B0A919E6284C006EF04D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5595B0A819E6284C006EF04D /* Default-568h@2x.png */; };
 		559C2AC71A1605CF00648FD3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559C2AC61A1605CF00648FD3 /* AdSupport.framework */; };
 		559C2ACB1A16060A00648FD3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559C2ACA1A16060A00648FD3 /* MessageUI.framework */; };
@@ -353,6 +354,8 @@
 		5543F4CA1A077945006FD173 /* god.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = god.png; sourceTree = "<group>"; };
 		5543F4CE1A0799E2006FD173 /* god7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = god7.wav; sourceTree = "<group>"; };
 		5543F4CF1A0799E2006FD173 /* no7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = no7.wav; sourceTree = "<group>"; };
+		556EEE511A2F088D00DDAA24 /* RateThisAppDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RateThisAppDialog.h; path = ios/RateThisAppDialog.h; sourceTree = SOURCE_ROOT; };
+		556EEE521A2F088D00DDAA24 /* RateThisAppDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateThisAppDialog.m; path = ios/RateThisAppDialog.m; sourceTree = SOURCE_ROOT; };
 		5595B0A819E6284C006EF04D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		559C2AC61A1605CF00648FD3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		559C2AC81A1605FA00648FD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -502,6 +505,8 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				556EEE511A2F088D00DDAA24 /* RateThisAppDialog.h */,
+				556EEE521A2F088D00DDAA24 /* RateThisAppDialog.m */,
 				553B8C741A2DE46300B6CE19 /* ShareSDK */,
 				55F510001A1B3E7200D95229 /* Flurry */,
 				559C2AFE1A160F5C00648FD3 /* GoogleMobileAdsSdkiOS-6.12.2 */,
@@ -1114,6 +1119,7 @@
 				55ACD97C1A13057A00ACF83A /* CommonHelper.cpp in Sources */,
 				553887B319D55E2F0025F5EB /* CardSprite.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				556EEE531A2F088D00DDAA24 /* RateThisAppDialog.m in Sources */,
 				553887C419D562300025F5EB /* ColorButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

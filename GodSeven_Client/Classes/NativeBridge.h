@@ -20,6 +20,7 @@ public:
     void setRootViewController(RootViewController* viewController);
     void showAdsView();
     void hideAdsView();
+    void showRateAppView();
     
 private:
     RootViewController* mViewController;

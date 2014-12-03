@@ -40,3 +40,20 @@ void NativeBridge::hideAdsView()
     if(mViewController != nil)
         [mViewController hideAdsView];
 }
+void NativeBridge::showRateAppView()
+{
+    log("showRateAppView");
+    if(mViewController != nil)
+    {
+        LanguageType lt= CCApplication::getInstance()->getCurrentLanguage();
+        switch (lt) {
+            case LanguageType::CHINESE:
+                [mViewController showRateAppViewCH];
+                break;
+                
+            default:
+                [mViewController showRateAppViewEN];
+                break;
+        }
+    }
+}

@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>RateTitle</key>
+	<string>评价神七</string>
+	<key>RateMessage</key>
+	<string>谢谢您的支持!</string>
+	<key>RateNow</key>
+	<string>支持一下</string>
+	<key>RateNever</key>
+	<string>残忍拒绝</string>
+	<key>RateLater</key>
+	<string>稍后支持</string>
 	<key>Share</key>
 	<string>分享</string>
 	<key>HelpTitle</key>

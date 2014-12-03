@@ -179,6 +179,34 @@ extern "C"{
         iAdBannerView.hidden = YES;
     }
 }
+- (void) showRateAppViewCH {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"chinese" ofType:@"plist"];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    NSString* rateTitle = [data objectForKey:@"RateTitle"];
+    NSString* rateMessage = [data objectForKey:@"RateMessage"];
+    NSString* rateNow = [data objectForKey:@"RateNow"];
+    NSString* rateNever = [data objectForKey:@"RateNever"];
+    NSString* rateLater = [data objectForKey:@"RateLater"];
+    [RateThisAppDialog threeButtonLayoutWithTitle:rateTitle
+                                          message:rateMessage
+                                rateNowButtonText:rateNow
+                              rateLaterButtonText:rateLater
+                              rateNeverButtonText:rateNever];
+}
+- (void) showRateAppViewEN {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"english" ofType:@"plist"];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    NSString* rateTitle = [data objectForKey:@"RateTitle"];
+    NSString* rateMessage = [data objectForKey:@"RateMessage"];
+    NSString* rateNow = [data objectForKey:@"RateNow"];
+    NSString* rateNever = [data objectForKey:@"RateNever"];
+    NSString* rateLater = [data objectForKey:@"RateLater"];
+    [RateThisAppDialog threeButtonLayoutWithTitle:rateTitle
+                                          message:rateMessage
+                                rateNowButtonText:rateNow
+                              rateLaterButtonText:rateLater
+                              rateNeverButtonText:rateNever];
+}
 - (GADRequest *)createRequest {
     GADRequest *request = [GADRequest request];
     // Requests test ads on devices you specify. Your test device ID is printed to the console when

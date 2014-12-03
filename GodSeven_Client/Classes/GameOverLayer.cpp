@@ -11,6 +11,7 @@
 #include "SimpleAudioEngine.h"
 #include "CommonHelper.h"
 #include "C2DXShareSDK.h"
+#include "NativeBridge.h"
 using namespace CocosDenshion;
 using namespace cn::sharesdk;
 USING_NS_CC;
@@ -49,6 +50,7 @@ bool GameOverLayer::initWithColor(bool success, float totalTime, int score, cons
     if ( !Layer::init() )
         return false;
     
+    NativeBridge::getInstance()->showRateAppView();
     setCascadeOpacityEnabled(true);
     
     auto touchListener=EventListenerTouchOneByOne::create();
