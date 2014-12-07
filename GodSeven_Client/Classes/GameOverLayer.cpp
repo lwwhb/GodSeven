@@ -30,10 +30,10 @@ void shareResultHandler(C2DXResponseState state, C2DXPlatType platType, CCDictio
             break;
     }
 }
-GameOverLayer* GameOverLayer::create(bool success, float totalTime, int score, const Color4B& bgColor, const Color3B& textColor)
+GameOverLayer* GameOverLayer::create(bool success, int number, float totalTime, int score, const Color4B& bgColor, const Color3B& textColor)
 {
     GameOverLayer* layer = new GameOverLayer();
-    if(layer && layer->initWithColor(success, totalTime, score, bgColor, textColor))
+    if(layer && layer->initWithColor(success, number, totalTime, score, bgColor, textColor))
     {
         layer->autorelease();
         return layer;
@@ -45,7 +45,7 @@ void GameOverLayer::setEnable(bool bEnable)
 {
     m_bEnable = bEnable;
 }
-bool GameOverLayer::initWithColor(bool success, float totalTime, int score, const Color4B& bgColor, const Color3B& textColor)
+bool GameOverLayer::initWithColor(bool success, int number, float totalTime, int score, const Color4B& bgColor, const Color3B& textColor)
 {
     if ( !Layer::init() )
         return false;
@@ -77,17 +77,32 @@ bool GameOverLayer::initWithColor(bool success, float totalTime, int score, cons
     
     float titleWidth =  visibleSize.width*0.15f;
     if(success)
+    {
         labelTitle = Label::createWithTTF(CommonHelper::getLocalString("NewRecord"), CommonHelper::getLocalString("MainFont"),titleWidth);
+        shareContent = CommonHelper::getLocalString("ShareContent");
+    }
     else
+    {
         labelTitle = Label::createWithTTF(CommonHelper::getLocalString("ComeOn"), CommonHelper::getLocalString("MainFont"),titleWidth);
+        shareContent = CommonHelper::getLocalString("ShareContent2");
+    }
     labelTitle->setAlignment(TextHAlignment::CENTER);
     labelTitle->setColor(textColor);
     labelTitle->enableOutline(Color4B::GRAY, 2);
     labelTitle->setPosition(visibleSize.width*0.5f, visibleSize.height*0.75f);
     this->addChild(labelTitle);
     
+    std::string strCurNum = String::createWithFormat(CommonHelper::getLocalString("CurNum").c_str(), number)->getCString();
     std::string strUseTime = String::createWithFormat(CommonHelper::getLocalString("Time").c_str(), totalTime)->getCString();
-    std::string strScore = String::createWithFormat(CommonHelper::getLocalString("Record").c_str(), score)->getCString();
+    std::string strScore = String::createWithFormat(CommonHelper::getLocalString("Score").c_str(), score)->getCString();
+    
+    Label* labelCurNum = Label::createWithTTF(strCurNum, CommonHelper::getLocalString("MainFont"),titleWidth*0.6f);
+    labelCurNum->setAlignment(TextHAlignment::CENTER);
+    labelCurNum->setColor(textColor);
+    labelCurNum->enableOutline(Color4B::GRAY, 2);
+    labelCurNum->setPosition(visibleSize.width*0.5f, visibleSize.height*0.6f);
+    this->addChild(labelCurNum);
+    
     Label* labelUseTime = Label::createWithTTF(strUseTime, CommonHelper::getLocalString("MainFont"),titleWidth*0.6f);
     labelUseTime->setAlignment(TextHAlignment::CENTER);
     labelUseTime->setColor(textColor);
@@ -187,17 +202,17 @@ void GameOverLayer::clickShareBtn()
     log("clickShareBtn");
     SimpleAudioEngine::getInstance()->playEffect("btnclick.wav");
     
-    CCDictionary *content = CCDictionary::create();
-    content -> setObject(CCString::create("这是一条测试内容"), "content");
-    content -> setObject(CCString::create("http://img0.bdstatic.com/img/image/shouye/systsy-11927417755.jpg"), "image");
-    content -> setObject(CCString::create("测试标题"), "title");
-    content -> setObject(CCString::create("测试描述"), "description");
-    content -> setObject(CCString::create("http://sharesdk.cn"), "url");
-    content -> setObject(CCString::createWithFormat("%d", C2DXContentTypeNews), "type");
-    content -> setObject(CCString::create("http://sharesdk.cn"), "siteUrl");
-    content -> setObject(CCString::create("ShareSDK"), "site");
-    content -> setObject(CCString::create("http://mp3.mwap8.com/destdir/Music/2009/20090601/ZuiXuanMinZuFeng20090601119.mp3"), "musicUrl");
-    content -> setObject(CCString::create("extInfo"), "extInfo");
-
-    C2DXShareSDK::showShareMenu(NULL, content, CCPointMake(235, 800), C2DXMenuArrowDirectionDown, shareResultHandler);
+    //截屏后的回调函数
+    auto callback = [&](const std::string& fullPath){
+        CCLOG("Image saved %s", fullPath.c_str());
+        //分享
+        CCDictionary *content = CCDictionary::create();
+        content -> setObject(CCString::create(shareContent), "content");
+        content -> setObject(CCString::create(fullPath), "image");
+        
+        C2DXShareSDK::showShareMenu(NULL, content, CCPointMake(235, 800), C2DXMenuArrowDirectionDown, shareResultHandler);
+    };
+    
+    //调用Director的截屏功能
+    CommonHelper::screenshot("sharePic.png", callback);
 }

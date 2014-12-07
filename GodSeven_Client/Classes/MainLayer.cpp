@@ -244,6 +244,12 @@ void MainLayer::reset()
 
 bool MainLayer::isNewRecord()
 {
+    int maxScore = UserDefault::getInstance()->getIntegerForKey("MaxScore", 0);
+    if (m_nScore > maxScore) {
+        UserDefault::getInstance()->setIntegerForKey("MaxScore", m_nScore);
+        UserDefault::getInstance()->flush();
+        return true;
+    }
     return false;
 }
 void MainLayer::caculateRecord()
@@ -405,12 +411,12 @@ void MainLayer::addGameOverLayer(bool bNewRecord)
         if(bNewRecord)
         {
             SimpleAudioEngine::getInstance()->playEffect("win.wav");
-            m_pGameOverLayer = GameOverLayer::create(true, m_fTotalTime, m_nScore, COLOR_LAYER_BG_SUCCESSED, COLOR_TEXT);
+            m_pGameOverLayer = GameOverLayer::create(true, m_nCurrentNum, m_fTotalTime, m_nScore, COLOR_LAYER_BG_SUCCESSED, COLOR_TEXT);
         }
         else
         {
             SimpleAudioEngine::getInstance()->playEffect("lose.wav");
-            m_pGameOverLayer = GameOverLayer::create(false, m_fTotalTime, m_nScore, COLOR_LAYER_BG_FAILED, COLOR_TEXT);
+            m_pGameOverLayer = GameOverLayer::create(false, m_nCurrentNum, m_fTotalTime, m_nScore, COLOR_LAYER_BG_FAILED, COLOR_TEXT);
         }
         m_pGameOverLayer->setPosition(Vec2(0, -100));
         m_pGameOverLayer->setOpacity(0);

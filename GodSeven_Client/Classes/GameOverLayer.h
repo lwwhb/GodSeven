@@ -14,11 +14,11 @@
 class GameOverLayer : public cocos2d::Layer
 {
 public:
-    static GameOverLayer* create(bool success, float totalTime, int score, const cocos2d::Color4B& bgColor, const cocos2d::Color3B& textColor);
+    static GameOverLayer* create(bool success, int number, float totalTime, int score, const cocos2d::Color4B& bgColor, const cocos2d::Color3B& textColor);
     
     void setEnable(bool bEnable);
 protected:
-    virtual bool initWithColor(bool success, float totalTime, int score, const cocos2d::Color4B& bgColor, const cocos2d::Color3B& textColor);
+    virtual bool initWithColor(bool success, int number, float totalTime, int score, const cocos2d::Color4B& bgColor, const cocos2d::Color3B& textColor);
     
     virtual bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event);
     virtual void onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event);
@@ -35,6 +35,7 @@ private:
     ColorButton*            rankBtn;
     ColorButton*            shareBtn;
     bool                    m_bEnable;
+    std::string             shareContent;
 };
 
 #endif /* defined(__SkipSeven__GameOverLayer__) */

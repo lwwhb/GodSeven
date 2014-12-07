@@ -51,6 +51,7 @@ static AppDelegate s_sharedApplication;
     ///Flurry App Key 3MKG3RHKJKSK67MGQPBB
     [Flurry startSession:@"3MKG3RHKJKSK67MGQPBB"];
     [Flurry setCrashReportingEnabled:YES];
+    
     // Add the view controller's view to the window and display.
     window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
 

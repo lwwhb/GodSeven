@@ -14,6 +14,7 @@ class CommonHelper
 {
 public:
     static std::string getLocalString(const char* key);
+    static void screenshot(const std::string& fileName,const std::function<void(const std::string&)>& callback);
 };
 
 #endif /* defined(__GodSeven__CommonHelper__) */

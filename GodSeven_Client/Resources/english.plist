@@ -14,6 +14,10 @@
 	<string>Later</string>
 	<key>Share</key>
 	<string>Share</string>
+	<key>ShareContent</key>
+	<string>My new record in God Seven!! ^_^</string>
+	<key>ShareContent2</key>
+	<string>I&apos;ve been degraded now, poor grades!! &gt;_&lt;</string>
 	<key>HelpTitle</key>
 	<string>Help</string>
 	<key>HelpInfo2</key>
@@ -26,8 +30,10 @@
 	<string>Rank</string>
 	<key>Restart</key>
 	<string>Restart</string>
-	<key>Record</key>
-	<string>Record : %d</string>
+	<key>CurNum</key>
+	<string>Number : %d</string>
+	<key>Score</key>
+	<string>Score : %d</string>
 	<key>Time</key>
 	<string>Time : %.4lf sec</string>
 	<key>ComeOn</key>

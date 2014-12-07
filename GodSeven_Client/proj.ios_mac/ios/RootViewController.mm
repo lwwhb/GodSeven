@@ -163,7 +163,7 @@ extern "C"{
         admobBannerView.delegate = self;
         [admobBannerView loadRequest:[self createRequest]];
     }
-    if(iAdBannerView != nil)
+    if(iAdBannerView != nil && iAdBannerView.bannerLoaded == YES)
     {
         iAdBannerView.hidden = NO;
     }
@@ -232,7 +232,7 @@ extern "C"{
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     NSLog(@"bannerViewActionDidFinish %d",iAdBannerView.bannerLoaded);
-    //iAdBannerView.hidden = NO;
+    iAdBannerView.hidden = NO;
     
     if (admobBannerView != nil)
     {
