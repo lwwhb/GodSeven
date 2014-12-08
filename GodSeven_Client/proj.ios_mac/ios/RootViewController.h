@@ -34,6 +34,7 @@
     ADBannerView  *iAdBannerView;
     GADBannerView *admobBannerView;
     int receiveAdmob;
+    bool hasShowAds;
 }
 - (BOOL) prefersStatusBarHidden;
 - (void) initAdBannerView;

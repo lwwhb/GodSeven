@@ -114,7 +114,7 @@ extern "C"{
     [super dealloc];
 }
 - (void)initAdBannerView {
-    
+    hasShowAds = false;
     receiveAdmob = 0;
     iAdBannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
     if(iAdBannerView != nil)
@@ -167,6 +167,7 @@ extern "C"{
     {
         iAdBannerView.hidden = NO;
     }
+    hasShowAds = true;
 }
 - (void) hideAdsView {
     if(admobBannerView != nil)
@@ -232,7 +233,8 @@ extern "C"{
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
     NSLog(@"bannerViewActionDidFinish %d",iAdBannerView.bannerLoaded);
-    iAdBannerView.hidden = NO;
+    if(hasShowAds)
+        iAdBannerView.hidden = NO;
     
     if (admobBannerView != nil)
     {

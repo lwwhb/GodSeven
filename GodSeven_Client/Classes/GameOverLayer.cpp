@@ -75,7 +75,7 @@ bool GameOverLayer::initWithColor(bool success, int number, float totalTime, int
     this->addChild(layerColorBG);
     
     
-    float titleWidth =  visibleSize.width*0.15f;
+    float titleWidth =  visibleSize.width*0.13f;
     if(success)
     {
         labelTitle = Label::createWithTTF(CommonHelper::getLocalString("NewRecord"), CommonHelper::getLocalString("MainFont"),titleWidth);
