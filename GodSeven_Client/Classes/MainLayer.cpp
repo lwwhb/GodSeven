@@ -160,6 +160,7 @@ void MainLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event
 {
     if(!m_bStart || m_bOver || beginY < 0)
         return;
+    
     cocos2d::Point touchPoint=touch->getLocation();
     endX = touchPoint.x;
     endY = touchPoint.y;
@@ -177,6 +178,16 @@ void MainLayer::doUp()
     log("doUp");
     if (checkValidity(false))
     {
+//        ////----debug
+//        //截屏后的回调函数
+//        auto callback = [&](const std::string& fullPath){
+//            CCLOG("Image saved %s", fullPath.c_str());
+//        };
+//        
+//        //调用Director的截屏功能
+//        CommonHelper::screenshot("MainLayer3.png", callback);
+//        ///----
+
         SimpleAudioEngine::getInstance()->playEffect("god7.wav");
         caculateRecord();
         m_fSecondTimer = 0.0f;
@@ -192,6 +203,17 @@ void MainLayer::doDown()
     log("doDown");
     if (checkValidity(true))
     {
+//        ////----debug
+//        //截屏后的回调函数
+//        auto callback = [&](const std::string& fullPath){
+//            CCLOG("Image saved %s", fullPath.c_str());
+//        };
+//        
+//        //调用Director的截屏功能
+//        CommonHelper::screenshot("MainLayer2.png", callback);
+//        ///----
+
+        
         SimpleAudioEngine::getInstance()->playEffect("no7.wav");
         caculateRecord();
         m_fSecondTimer = 0.0f;

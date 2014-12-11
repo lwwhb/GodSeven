@@ -81,8 +81,8 @@ void AppDelegate::initPlatformConfig()
     
     //Twitter
     CCDictionary *twConfigDict = CCDictionary::create();
-    twConfigDict -> setObject(CCString::create("mnTGqtXk0TYMXYTN7qUxg"), "consumer_key");
-    twConfigDict -> setObject(CCString::create("ROkFqr8c3m1HXqS3rm3TJ0WkAJuwBOSaWhPbZ9Ojuc"), "consumer_secret");
-    twConfigDict -> setObject(CCString::create("http://www.sharesdk.cn"), "redirect_uri");
+    twConfigDict -> setObject(CCString::create("sMRgFEUjmICX1FjjELqT2zc33"), "consumer_key");
+    twConfigDict -> setObject(CCString::create("qC0wGr9A5KN4DRf3ZGd9MkuNDtvcZqkhIcZWszcrMhtQ01O6EP"), "consumer_secret");
+    twConfigDict -> setObject(CCString::create("http://www.wanaxgame.com/game/auth_callback"), "redirect_uri");
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeTwitter, twConfigDict);
 }

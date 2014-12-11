@@ -71,6 +71,16 @@ void MainMenuLayer::onTouchEnded(Touch *touch, Event *unused_event)
         return;
     if(touch)
     {
+//        ////---debug
+//        //截屏后的回调函数
+//        auto callback = [&](const std::string& fullPath){
+//            CCLOG("Image saved %s", fullPath.c_str());
+//        };
+//        
+//        //调用Director的截屏功能
+//        CommonHelper::screenshot("MainMenu.png", callback);
+//        ///---
+        
         if(startBtn)
         {
             Vec2 locationInNode = startBtn->convertToNodeSpace(touch->getLocation());

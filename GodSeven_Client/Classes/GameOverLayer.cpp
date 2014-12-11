@@ -22,9 +22,11 @@ void shareResultHandler(C2DXResponseState state, C2DXPlatType platType, CCDictio
     switch (state) {
         case C2DXResponseStateSuccess:
             CCLog("分享成功");
+            SimpleAudioEngine::getInstance()->playEffect("god7.wav");
             break;
         case C2DXResponseStateFail:
             CCLog("分享失败");
+            SimpleAudioEngine::getInstance()->playEffect("no7.wav");
             break;
         default:
             break;
@@ -142,6 +144,16 @@ void GameOverLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_e
         return;
     if(touch)
     {
+//        ////----debug
+//        //截屏后的回调函数
+//        auto callback = [&](const std::string& fullPath){
+//            CCLOG("Image saved %s", fullPath.c_str());
+//        };
+//        
+//        //调用Director的截屏功能
+//        CommonHelper::screenshot("GameOver.png", callback);
+//        ///----
+
         if(restartBtn)
         {
             Vec2 locationInNode = restartBtn->convertToNodeSpace(touch->getLocation());
