@@ -248,6 +248,7 @@ extern "C"{
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
     NSLog(@"didFailToReceiveAdWithError:%@",error);
+    iAdBannerView.hidden = YES;
 }
 
 #pragma mark GADBannerViewDelegate impl
