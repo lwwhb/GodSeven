@@ -28,6 +28,10 @@ void shareResultHandler(C2DXResponseState state, C2DXPlatType platType, CCDictio
             CCLog("分享失败");
             SimpleAudioEngine::getInstance()->playEffect("no7.wav");
             break;
+        case C2DXResponseStateCancel:
+            CCLog("用户取消");
+            SimpleAudioEngine::getInstance()->playEffect("no7.wav");
+            break;
         default:
             break;
     }
@@ -220,7 +224,10 @@ void GameOverLayer::clickShareBtn()
         //分享
         CCDictionary *content = CCDictionary::create();
         content -> setObject(CCString::create(shareContent), "content");
+        //content -> setObject(CCString::create(shareContent), "defaultContent");
         content -> setObject(CCString::create(fullPath), "image");
+        
+        content -> setObject(String::createWithFormat("%d", C2DXContentTypeImage), "type");
         
         C2DXShareSDK::showShareMenu(NULL, content, CCPointMake(235, 800), C2DXMenuArrowDirectionDown, shareResultHandler);
     };

@@ -113,7 +113,8 @@ void MainLayer::adjustCurCardColor(float escapeTime)
 {
     //log("adjustCardColor");
     float percent = m_fSecondTimer/MAX_WAIT_TIME;
-    m_pCurCard->setOpacity(255*(1.0f - percent));
+    if(m_pCurCard)
+        m_pCurCard->setOpacity(255*(1.0f - percent));
 }
 bool MainLayer::checkValidity(bool notSeven)
 {
@@ -167,7 +168,7 @@ void MainLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event
 
     if(endY < beginY)
         doDown();
-    else if(endY > beginY)
+    else if(endY > beginY+10)
         doUp();
     else
         doClick();

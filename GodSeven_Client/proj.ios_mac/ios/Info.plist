@@ -60,6 +60,14 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>wx1d8e061c7948475b</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
 				<string>fb667421830043877</string>
 			</array>
 		</dict>

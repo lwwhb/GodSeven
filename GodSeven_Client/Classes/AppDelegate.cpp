@@ -13,8 +13,14 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     //初始化ShareSDK
-    C2DXShareSDK::open(CCString::create("api20"), false);
+    C2DXShareSDK::open(CCString::create("480cac77c908"), false);
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+    //初始化ShareSDK
+    C2DXShareSDK::open(CCString::create("480c57be861e"), false);
+    
+#endif
     
     //初始化社交平台信息
     this->initPlatformConfig();
@@ -68,7 +74,7 @@ void AppDelegate::initPlatformConfig()
     
     //微信
     CCDictionary *wcConfigDict = CCDictionary::create();
-    wcConfigDict -> setObject(CCString::create("wx4868b35061f87885"), "app_id");
+    wcConfigDict -> setObject(CCString::create("wx1d8e061c7948475b"), "app_id");
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeWeixiSession, wcConfigDict);
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeWeixiTimeline, wcConfigDict);
     C2DXShareSDK::setPlatformConfig(C2DXPlatTypeWeixiFav, wcConfigDict);

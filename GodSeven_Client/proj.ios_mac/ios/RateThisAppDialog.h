@@ -12,11 +12,11 @@
 // Please use the "iTunes Link Maker" to create this url:
 // http://itunes.apple.com/linkmaker/
 // you do not need to put "itms://" at the front or anything like that.
-#define APP_STORE_LINK @"http://itunes.apple.com/au/app/crayon-box/id425861168?mt=8&uo=4"
+#define APP_STORE_LINK @"https://itunes.apple.com/us/app/godseven/id947850863?l=zh&ls=1&mt=8"
 
 // this is how many times your app can launch before showing this dialog
 // ie. setting this to 2 will cause the dialog to appear on the second time the app is launched
-#define PROMPT_AFTER_X_LAUNCHES 5
+#define PROMPT_AFTER_X_LAUNCHES 8
 
 @interface RateThisAppDialog : NSObject {
     
