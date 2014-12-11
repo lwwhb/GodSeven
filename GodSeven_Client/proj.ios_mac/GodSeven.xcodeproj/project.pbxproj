@@ -89,6 +89,7 @@
 		5543F4D01A0799E2006FD173 /* god7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5543F4CE1A0799E2006FD173 /* god7.wav */; };
 		5543F4D11A0799E2006FD173 /* no7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5543F4CF1A0799E2006FD173 /* no7.wav */; };
 		556EEE531A2F088D00DDAA24 /* RateThisAppDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 556EEE521A2F088D00DDAA24 /* RateThisAppDialog.m */; };
+		558EC3A31A39F08400988D35 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 558EC3A21A39F08400988D35 /* Default-568h@2x.png */; };
 		559C2AC71A1605CF00648FD3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559C2AC61A1605CF00648FD3 /* AdSupport.framework */; };
 		559C2ACB1A16060A00648FD3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559C2ACA1A16060A00648FD3 /* MessageUI.framework */; };
 		559C2ACF1A16062800648FD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559C2ACE1A16062800648FD3 /* SystemConfiguration.framework */; };
@@ -355,6 +356,7 @@
 		5543F4CF1A0799E2006FD173 /* no7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = no7.wav; sourceTree = "<group>"; };
 		556EEE511A2F088D00DDAA24 /* RateThisAppDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RateThisAppDialog.h; path = ios/RateThisAppDialog.h; sourceTree = SOURCE_ROOT; };
 		556EEE521A2F088D00DDAA24 /* RateThisAppDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateThisAppDialog.m; path = ios/RateThisAppDialog.m; sourceTree = SOURCE_ROOT; };
+		558EC3A21A39F08400988D35 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		559C2AC61A1605CF00648FD3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		559C2AC81A1605FA00648FD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		559C2ACA1A16060A00648FD3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
@@ -580,6 +582,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				558EC3A21A39F08400988D35 /* Default-568h@2x.png */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -1064,6 +1067,7 @@
 				553887C019D55E3A0025F5EB /* minicatoon.ttf in Resources */,
 				55D6D8EE1A08FB6200AC5414 /* btnclick.wav in Resources */,
 				559C2B211A160F5C00648FD3 /* README.txt in Resources */,
+				558EC3A31A39F08400988D35 /* Default-568h@2x.png in Resources */,
 				55D6D8F01A08FB6200AC5414 /* win.wav in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
