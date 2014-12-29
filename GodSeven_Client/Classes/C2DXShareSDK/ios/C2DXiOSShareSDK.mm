@@ -354,7 +354,7 @@ void C2DXiOSShareSDK::open(CCString *appKey, bool useAppTrusteeship)
 {
     NSString *appKeyStr = [NSString stringWithCString:appKey -> getCString() encoding:NSUTF8StringEncoding];
     [ShareSDK registerApp:appKeyStr useAppTrusteeship:useAppTrusteeship];
-//    [ShareSDK ssoEnabled:NO];
+    [ShareSDK ssoEnabled:NO];
 }
 
 void C2DXiOSShareSDK::close()
@@ -592,13 +592,13 @@ void C2DXiOSShareSDK::showShareMenu(CCArray *platTypes, CCDictionary *content, C
     }
     
     //设置iPad菜单位置
-//    pt = CCDirector::sharedDirector() -> convertToUI(pt);
+    pt = CCDirector::sharedDirector() -> convertToUI(pt);
     if (!_refView)
     {
         _refView = [[UIView alloc] initWithFrame:CGRectMake(pt.x, pt.y, 1, 1)];
     }
-    _refView.frame = CGRectMake(pt.x, pt.y, 1, 1);
-    [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:_refView];
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:_refView];
     
     container = [ShareSDK container];
     [container setIPadContainerWithView:_refView arrowDirect:direction];

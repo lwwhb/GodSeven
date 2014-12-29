@@ -1995,7 +1995,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
             endingLineNumber = "142"
-            landmarkName = "C2DXShareSDK::shareContent(C2DXPlatType platType, CCDictionary *content, C2DXShareResultEvent callback)"
+            landmarkName = "C2DXShareSDK::shareContent(C2DXPlatType platType, Dictionary *content, C2DXShareResultEvent callback)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2198,11 +2198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/CommonHelper.cpp"
-            timestampString = "440072687.628263"
+            timestampString = "441190804.060092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "CommonHelper::getLocalString(const char* key)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2214,11 +2214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/CommonHelper.cpp"
-            timestampString = "440072713.573089"
+            timestampString = "441190804.060092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "CommonHelper::screenshot(const std::string&amp; fileName,const std::function&lt;void(const std::string&amp;)&gt;&amp; callback)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2230,11 +2230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/CommonHelper.cpp"
-            timestampString = "440072720.24926"
+            timestampString = "441190804.060092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "CommonHelper::getLocalString(const char* key)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2252,6 +2252,38 @@
             startingLineNumber = "158"
             endingLineNumber = "158"
             landmarkName = "Application::getCurrentLanguage()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/CommonHelper.cpp"
+            timestampString = "441190891.471628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CommonHelper::getLocalString(const char* key)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../cocos2d/cocos/platform/CCFileUtils.cpp"
+            timestampString = "441195689.24363"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "888"
+            endingLineNumber = "888"
+            landmarkName = "FileUtils::isFileExist(const std::string&amp; filename)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -15,10 +15,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
     //初始化ShareSDK
-    C2DXShareSDK::open(CCString::create("480cac77c908"), false);
+    C2DXShareSDK::open("480cac77c908", false);
 #elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
     //初始化ShareSDK
-    C2DXShareSDK::open(CCString::create("480c57be861e"), false);
+    C2DXShareSDK::open("480c57be861e", false);
     
 #endif
     
@@ -33,8 +33,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
     
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+    std::vector<std::string> searchPaths;
+    searchPaths.push_back("fonts");
+    FileUtils::getInstance()->setSearchPaths(searchPaths);
+#endif
+#if COCOS2D_DEBUG
     // turn on display FPS
     director->setDisplayStats(true);
+#endif
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);

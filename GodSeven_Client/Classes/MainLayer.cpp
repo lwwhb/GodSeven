@@ -8,7 +8,6 @@
 
 #include "MainLayer.h"
 #include "CardSprite.h"
-#include "UIButton.h"
 #include "SimpleAudioEngine.h"
 #include "CommonHelper.h"
 #include "NativeBridge.h"
@@ -44,6 +43,9 @@ bool MainLayer::init()
     touchListener->onTouchBegan=CC_CALLBACK_2(MainLayer::onTouchBegan,this);
     touchListener->onTouchEnded=CC_CALLBACK_2(MainLayer::onTouchEnded,this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener,this);
+    auto keyboardListener=EventListenerKeyboard::create();
+    keyboardListener->onKeyReleased=CC_CALLBACK_2(MainLayer::onKeyReleased,this);
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardListener,this);
     
     beginX = beginY = endX = endY = -1;
     
@@ -173,7 +175,10 @@ void MainLayer::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event
     else
         doClick();
 }
-
+void MainLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, cocos2d::Event *unused_event)
+{
+    Director::getInstance()->end();
+}
 void MainLayer::doUp()
 {
     log("doUp");

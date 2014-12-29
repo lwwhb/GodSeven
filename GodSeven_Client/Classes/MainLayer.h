@@ -40,6 +40,7 @@ public:
     
     virtual bool onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event);
     virtual void onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event);
+    virtual void onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event *unused_event);
     
     void reset();
 private:

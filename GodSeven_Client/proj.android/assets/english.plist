@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RateTitle</key>
+	<string>Rate GodSeven</string>
+	<key>RateMessage</key>
+	<string>thanks for your supports!</string>
+	<key>RateNow</key>
+	<string>Now</string>
+	<key>RateNever</key>
+	<string>Never</string>
+	<key>RateLater</key>
+	<string>Later</string>
+	<key>Share</key>
+	<string>Share</string>
+	<key>ShareContent</key>
+	<string>My new record in God Seven!! ^_^ https://itunes.apple.com/us/app/godseven/id947850863?l=zh&amp;ls=1&amp;mt=8</string>
+	<key>ShareContent2</key>
+	<string>I&apos;ve been degraded now, poor grades!! &gt;_&lt; https://itunes.apple.com/us/app/godseven/id947850863?l=zh&amp;ls=1&amp;mt=8</string>
+	<key>HelpTitle</key>
+	<string>Help</string>
+	<key>HelpInfo2</key>
+	<string>2.Higher score with less time and larger number</string>
+	<key>HelpInfo1</key>
+	<string>1.Slide up when the number is the multiple of 7 or contains 7; otherwise, slide down.</string>
+	<key>GlobalRank</key>
+	<string>Global Rank</string>
+	<key>Rank</key>
+	<string>Rank</string>
+	<key>Restart</key>
+	<string>Restart</string>
+	<key>CurNum</key>
+	<string>Number : %d</string>
+	<key>Score</key>
+	<string>Score : %d</string>
+	<key>Time</key>
+	<string>Time : %.4lf sec</string>
+	<key>ComeOn</key>
+	<string>Come On</string>
+	<key>NewRecord</key>
+	<string>New Record</string>
+	<key>Help</key>
+	<string>Help</string>
+	<key>Start</key>
+	<string>Start</string>
+	<key>MainFont</key>
+	<string>babydoll.ttf</string>
+	<key>MainTitle</key>
+	<string>God 7</string>
+</dict>
+</plist>

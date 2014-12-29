@@ -59,11 +59,6 @@ namespace cn
             C2DXPlatTypeYiXinSession = 38,     /**< 易信好友 */
             C2DXPlatTypeYiXinTimeline = 39,    /**< 易信朋友圈 */
             C2DXPlatTypeYiXinFav = 40,         /**< 易信收藏 */
-            C2DXPlatTypeMingDao = 41,          /**< 明道 */
-            C2DXPlatTypeLine = 42,             /**< Line */
-            C2DXPlatTypeWhatsApp = 43,         /**< Whats App */
-            C2DXPlatTypeKaKaoTalk = 44,        /**< KaKao Talk */
-            C2DXPlatTypeKaKaoStory = 45,       /**< KaKao Story */
             C2DXPlatTypeAny = 99               /**< 任意平台 */
         };
         
@@ -104,23 +99,23 @@ namespace cn
             C2DXMenuArrowDirectionLeft = 1UL << 2, /**< 向左 */
             C2DXMenuArrowDirectionRight = 1UL << 3, /**< 向右 */
             C2DXMenuArrowDirectionAny = C2DXMenuArrowDirectionUp | C2DXMenuArrowDirectionDown | C2DXMenuArrowDirectionLeft | C2DXMenuArrowDirectionRight, /**< 任意 */
-            C2DXMenuArrowDirectionUnknown = UINT32_MAX /**< 未知 */
+            C2DXMenuArrowDirectionUnknown = INT_MAX /**< 未知 */
         };
         
         /**
          *	@brief	授权返回回调事件
          */
-        typedef void(*C2DXAuthResultEvent) (C2DXResponseState state, C2DXPlatType platType, CCDictionary *error);
+        typedef void(*C2DXAuthResultEvent) (C2DXResponseState state, C2DXPlatType platType, Dictionary *error);
         
         /**
          *	@brief	获取用户信息返回回调事件
          */
-        typedef void(*C2DXGetUserInfoResultEvent) (C2DXResponseState state, C2DXPlatType platType, CCDictionary *userInfo, CCDictionary *error);
+        typedef void(*C2DXGetUserInfoResultEvent) (C2DXResponseState state, C2DXPlatType platType, Dictionary *userInfo, Dictionary *error);
         
         /**
          *	@brief	分享返回回调事件
          */
-        typedef void(*C2DXShareResultEvent) (C2DXResponseState state, C2DXPlatType platType, CCDictionary *shareInfo, CCDictionary *error);
+        typedef void(*C2DXShareResultEvent) (C2DXResponseState state, C2DXPlatType platType, Dictionary *shareInfo, Dictionary *error);
     }
 }
 

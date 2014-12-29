@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RateTitle</key>
+	<string>评价神七</string>
+	<key>RateMessage</key>
+	<string>谢谢您的支持!</string>
+	<key>RateNow</key>
+	<string>支持一下</string>
+	<key>RateNever</key>
+	<string>残忍拒绝</string>
+	<key>RateLater</key>
+	<string>稍后支持</string>
+	<key>Share</key>
+	<string>分享</string>
+	<key>ShareContent</key>
+	<string>我在《神七》中突破了极限，实现了自我，晒成绩啦！https://itunes.apple.com/us/app/godseven/id947850863?l=zh&amp;ls=1&amp;mt=8</string>
+	<key>ShareContent2</key>
+	<string>我退步了，成绩好可怜，我都不好意思晒了！https://itunes.apple.com/us/app/godseven/id947850863?l=zh&amp;ls=1&amp;mt=8</string>
+	<key>HelpTitle</key>
+	<string>帮助</string>
+	<key>HelpInfo2</key>
+	<string>2.耗时越少，数字越大，得分越高。</string>
+	<key>HelpInfo1</key>
+	<string>1.含有数字七和七的倍数的卡片向上滑动分离，其他数字卡向下滑动分离。</string>
+	<key>GlobalRank</key>
+	<string>全球排行榜</string>
+	<key>Rank</key>
+	<string>排行榜</string>
+	<key>Restart</key>
+	<string>重新开始</string>
+	<key>CurNum</key>
+	<string>数字 : %d</string>
+	<key>Score</key>
+	<string>得分 : %d</string>
+	<key>Time</key>
+	<string>耗时 : %.4lf 秒</string>
+	<key>ComeOn</key>
+	<string>加油</string>
+	<key>NewRecord</key>
+	<string>新纪录</string>
+	<key>Help</key>
+	<string>帮助</string>
+	<key>Start</key>
+	<string>开始</string>
+	<key>MainFont</key>
+	<string>minicatoon.ttf</string>
+	<key>MainTitle</key>
+	<string>神七</string>
+</dict>
+</plist>
