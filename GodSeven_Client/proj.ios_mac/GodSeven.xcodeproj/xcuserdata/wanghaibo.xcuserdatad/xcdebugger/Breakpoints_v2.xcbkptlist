@@ -239,7 +239,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "421"
             endingLineNumber = "421"
-            landmarkName = "MainLayer::removeMenuLayer(bool start)"
+            landmarkName = "MainLayer::endMenuLayer(bool start)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -303,7 +303,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "373"
             endingLineNumber = "373"
-            landmarkName = "MainLayer::removeCardSprite(CardSprite* removeCard)"
+            landmarkName = "MainLayer::endCardSprite(bool bSuccess, CardSprite* removeCard)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -319,7 +319,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "284"
             endingLineNumber = "284"
-            landmarkName = "MainLayer::addCardSprite()"
+            landmarkName = "MainLayer::caculateRecord()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -799,7 +799,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "280"
             endingLineNumber = "280"
-            landmarkName = "MainLayer::caculateRecord()"
+            landmarkName = "MainLayer::isNewRecord()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -863,7 +863,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
             endingLineNumber = "204"
-            landmarkName = "MainLayer::doDown()"
+            landmarkName = "MainLayer::doUp()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -879,7 +879,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "231"
             endingLineNumber = "231"
-            landmarkName = "MainLayer::doClick()"
+            landmarkName = "MainLayer::doDown()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -895,7 +895,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
             endingLineNumber = "180"
-            landmarkName = "MainLayer::doUp()"
+            landmarkName = "MainLayer::onKeyReleased(EventKeyboard::KeyCode keyCode, cocos2d::Event *unused_event)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1291,7 +1291,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "375"
             endingLineNumber = "375"
-            landmarkName = "MainLayer::removeCardSprite(CardSprite* removeCard)"
+            landmarkName = "MainLayer::endCardSprite(bool bSuccess, CardSprite* removeCard)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1914,9 +1914,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "272"
-            endingLineNumber = "272"
-            landmarkName = "MainLayer::isNewRecord()"
-            landmarkType = "5">
+            endingLineNumber = "272">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1931,7 +1929,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "271"
             endingLineNumber = "271"
-            landmarkName = "MainLayer::isNewRecord()"
+            landmarkName = "MainLayer::reset()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

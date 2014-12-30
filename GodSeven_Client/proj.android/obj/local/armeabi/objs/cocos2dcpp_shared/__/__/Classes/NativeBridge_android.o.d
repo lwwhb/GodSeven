@@ -315,7 +315,8 @@
   jni/../../cocos2d/cocos/./deprecated/CCDouble.h \
   jni/../../cocos2d/cocos/./deprecated/CCBool.h \
   jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
-  jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h
+  jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
+  jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h
 
 jni/../../Classes/NativeBridge.h:
 
@@ -950,3 +951,5 @@ jni/../../cocos2d/cocos/./deprecated/CCBool.h:
 jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h:
 
 jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h:
+
+jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h:
